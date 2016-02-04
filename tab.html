@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Tabbladen</title>
+		<style>
+			* {
+				font-family: Verdana, sans-serif;
+				font-size: 10pt;
+			}
+
+			ul {
+				margin: 15px 10px 5px;
+				padding: 0;
+			}
+
+			li {
+				background-color: #ccf;
+				border: 1px solid black;
+				cursor: pointer;
+				display: inline;
+				padding: 4px 20px;
+			}
+
+			#tab1{
+				border: 1px solid black;
+				margin-top: -1px;
+				padding: 1em;
+				width: 500px;
+			}
+			
+			#tab2{
+				display: none;
+				border: 1px solid black;
+				margin-top: -1px;
+				padding: 1em;
+				width: 500px;
+			}
+			
+			
+			#tab3{
+				display: none;
+				border: 1px solid black;
+				margin-top: -1px;
+				padding: 1em;
+				width: 500px;
+			}
+			
+			#html{
+			background-color: white;
+			border-bottom: none;
+			padding-bottom: 5px;
+			}
+				
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li id="html">HTML</li>
+			<li id="css">CSS</li>
+			<li id="javascript">Javascript</li>
+		</ul>
+
+		<p id="tab1">
+			HTML is een taal om de structuur van documenten te beschrijven. Een webbrowser zet HTML-code om in een simpele grafische weergave voor de gebruiker. Als je de opmaak wilt aanpassen, heb je CSS nodig en met Javascript kunt je de pagina volledig interactief maken.
+		</p>
+
+		<p id="tab2">
+			Met CSS kun je de opmaak van een HTML-documenten aanpassen. Denk aan lettertypes, kleuren, marges, kaders en nog veel meer.
+		</p>
+
+		<p id="tab3">
+			Javascript is een scripttaal die voornamelijk gebruikt wordt op webpagina's. Je kunt er allerlei interessante effecten mee programmeren door on-the-fly CSS en HTML aan te passen.
+		</p>
+		
+<script type="text/javascript">
+	function klapuit() {
+		klapin();
+		var tab2 = document.getElementById("tab2");
+		tab2.style.display = 'block';
+	}
+	document.getElementById("css").addEventListener("click", klapuit);
+	
+		function klapuit2() {
+		klapin();
+		var tab3 = document.getElementById("tab3");
+		tab3.style.display = 'block';
+	}
+	document.getElementById("javascript").addEventListener("click", klapuit2);
+	
+			function klapuit3() {
+		klapin();
+		var tab1 = document.getElementById("tab1");
+		tab1.style.display = 'block';
+	}
+	document.getElementById("html").addEventListener("click", klapuit3);
+	
+	function klapin(){
+	var tab1 = document.getElementById("tab1");
+	tab1.style.display = 'none';
+	var tab2 = document.getElementById("tab2");
+	tab2.style.display = 'none';
+	var tab3 = document.getElementById("tab3");
+	tab3.style.display = 'none';
+	}
+</script>
+	</body>
+</html>
