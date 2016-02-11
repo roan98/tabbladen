@@ -46,10 +46,12 @@
 			}
 			
 			#html{
-			background-color: white;
-			border-bottom: none;
-			padding-bottom: 5px;
+				background-color: white;
+				border-bottom: none;
+				padding-bottom: 5px;
 			}
+			
+
 				
 		</style>
 	</head>
@@ -76,8 +78,11 @@
 <script type="text/javascript">
 	function klapuit() {
 		klapin();
-		var tab2 = document.getElementById("tab2");
+		var tab2 = document.getElementById("tab2");	
 		tab2.style.display = 'block';
+		css.style.background = 'white';
+		css.style.borderBottom = 'none';
+		css.style.paddingBottom = '5px';
 	}
 	document.getElementById("css").addEventListener("click", klapuit);
 	
@@ -85,6 +90,9 @@
 		klapin();
 		var tab3 = document.getElementById("tab3");
 		tab3.style.display = 'block';
+		javascript.style.background = 'white';
+		javascript.style.borderBottom = 'none';
+		javascript.style.paddingBottom = '5px';
 	}
 	document.getElementById("javascript").addEventListener("click", klapuit2);
 	
@@ -92,16 +100,26 @@
 		klapin();
 		var tab1 = document.getElementById("tab1");
 		tab1.style.display = 'block';
+		html.style.background = 'white';
+		html.style.borderBottom = 'none';
+		html.style.paddingBottom = '5px';
 	}
 	document.getElementById("html").addEventListener("click", klapuit3);
 	
 	function klapin(){
 	var tab1 = document.getElementById("tab1");
 	tab1.style.display = 'none';
+	html.style.background = '#ccf';
+	html.style.borderBottom = '1px solid black';
 	var tab2 = document.getElementById("tab2");
 	tab2.style.display = 'none';
+	css.style.background = '#ccf';
+	css.style.borderBottom = '1px solid black';
 	var tab3 = document.getElementById("tab3");
 	tab3.style.display = 'none';
+	javascript.style.background = '#ccf';
+	javascript.style.borderBottom = '1px solid black';
+	
 	}
 </script>
 	</body>
